@@ -7,7 +7,7 @@ export class PopshotAudio {
     /** @type {AudioContext | null} */
     this.ctx = null;
     this.enabled = true;
-    this.master = 0.2;
+    this.master = 0.24;
   }
 
   async unlock() {
@@ -54,8 +54,9 @@ export class PopshotAudio {
 
   /** Soft whoosh / noise-ish dart throw */
   shoot() {
-    this.tone(180, 0.04, "sawtooth", 0.05);
-    this.tone(420, 0.06, "triangle", 0.04, 0.02);
+    this.tone(180, 0.05, "sawtooth", 0.07);
+    this.tone(420, 0.07, "triangle", 0.055, 0.02);
+    this.tone(90, 0.04, "sine", 0.035, 0.01);
   }
 
   pop() {
