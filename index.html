@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="夜市風射氣球：彩球陣、飛鏢射擊、連擊加分、金氣球加碼。純前端 Playgrounds SAM。"
+    />
+    <title>射氣球</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <h1>射氣球</h1>
+        <p class="tagline">夜市攤位 · 連擊加分 · 純娛樂</p>
+      </header>
+
+      <section class="meter" aria-label="分數">
+        <div class="meter-item">
+          <span class="label">分數</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="meter-item">
+          <span class="label">連擊</span>
+          <strong id="combo">0</strong>
+        </div>
+        <div class="meter-item">
+          <span class="label">飛鏢</span>
+          <strong id="ammo">20</strong>
+        </div>
+        <div class="meter-item">
+          <span class="label">剩餘</span>
+          <strong id="time">30</strong>
+        </div>
+        <div class="meter-actions">
+          <button type="button" id="btn-mute" class="secondary" aria-pressed="true">
+            音效開
+          </button>
+        </div>
+      </section>
+
+      <div class="stage">
+        <canvas
+          id="game"
+          width="480"
+          height="640"
+          role="img"
+          aria-label="射氣球遊戲區"
+        ></canvas>
+      </div>
+
+      <p id="status" class="status" role="status">準備開台</p>
+
+      <div class="controls">
+        <button type="button" id="btn-start">開台</button>
+        <button type="button" id="btn-reset" class="secondary">重來</button>
+      </div>
+
+      <p class="hint">
+        點螢幕瞄準射鏢；連續命中連擊加分。金色氣球較少見、多 15 分。20 支飛鏢或 30 秒一局。
+      </p>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
